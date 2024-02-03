@@ -20,7 +20,7 @@ struct SignInView: View {
                 .overlay {
                     LinearGradient(gradient: Gradient(colors: [Color("AppColor"), .clear]), startPoint: .bottom, endPoint: .top)
                 }
-                .frame(height: 200)
+                .frame(height: 400)
                 Spacer()
             VStack{
                 SingInEmailTextField(placeHolder: "Email Adress", text: $viewModel.email)
@@ -33,21 +33,39 @@ struct SignInView: View {
                         .bold()
                         .foregroundStyle(.white)
                         .padding()
-                     //   .frame(width: 150, height: 55)
                         .frame(maxWidth: .infinity)
                         .background {
-                            RoundedRectangle(cornerRadius: 10)
+                            RoundedRectangle(cornerRadius: 20)
                                 .fill(Color("AppColor"))
-                            
                         }
                 }
 
             }
             .padding()
             Spacer()
+            VStack(spacing: 24) {
+                Text("Don't Have an account yet?")
+                    .foregroundStyle(Color("AppColor"))
+                Button {
+                    
+                } label: {
+                    Text("Register")
+                        .bold()
+                        .foregroundStyle(Color("AppColor"))
+                        .padding()
+                        .frame(maxWidth: .infinity)
+                        .background {
+                            RoundedRectangle(cornerRadius: 20)
+                                .stroke(Color("AppColor"))
+                        }
+                }
+
+            }
+            .padding()
+            .padding(.bottom)
         }
         .frame(maxHeight: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/,  alignment: .top)
-        .padding(.top,48)
+        .ignoresSafeArea()
          
     }
         
