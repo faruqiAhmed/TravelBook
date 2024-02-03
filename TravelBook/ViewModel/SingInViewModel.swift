@@ -7,10 +7,23 @@
 
 
 import Observation
- @Observable
+import FirebaseAuth
 
+ @Observable
 class SingInViewModel {
     var email = ""
     var password = ""
     var showPassWord = false
+    
+    func signInWithEmail() {
+        Task {
+            do {
+                try await AuthService.shared.registerWithEmail(email: email, password: password)
+                
+            } catch {
+                print(error.localizedDescription)
+            }
+        }
+    }
+    
 }

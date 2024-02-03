@@ -27,7 +27,7 @@ struct SignInView: View {
                 SingInPasswordTextField(placeHolder: "PassWord", showPassWord: $viewModel.showPassWord, text: $viewModel.password)
                     .padding(.bottom)
                 Button {
-                    
+                    viewModel.signInWithEmail()
                 } label: {
                    Text("Sing In")
                         .bold()
