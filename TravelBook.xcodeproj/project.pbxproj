@@ -41,6 +41,7 @@
 		E29E70E82B6E2605000291D1 /* FirebaseStorageCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = E29E70E72B6E2605000291D1 /* FirebaseStorageCombine-Community */; };
 		E29E70EB2B6E2B04000291D1 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E29E70EA2B6E2B04000291D1 /* AuthService.swift */; };
 		E29E70F22B6E5E65000291D1 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E29E70F12B6E5E65000291D1 /* HomeView.swift */; };
+		E29E70F72B6E62A9000291D1 /* String+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = E29E70F62B6E62A9000291D1 /* String+Ext.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +57,7 @@
 		E29E70B82B6E2409000291D1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		E29E70EA2B6E2B04000291D1 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		E29E70F12B6E5E65000291D1 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		E29E70F62B6E62A9000291D1 /* String+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Ext.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +113,7 @@
 		E29E709C2B6D7068000291D1 /* TravelBook */ = {
 			isa = PBXGroup;
 			children = (
+				E29E70F52B6E6285000291D1 /* Utils */,
 				E29E70B82B6E2409000291D1 /* GoogleService-Info.plist */,
 				E29E70E92B6E2AB4000291D1 /* Service */,
 				E29E70AE2B6D8A20000291D1 /* ViewModel */,
@@ -164,6 +167,14 @@
 				E29E70EA2B6E2B04000291D1 /* AuthService.swift */,
 			);
 			path = Service;
+			sourceTree = "<group>";
+		};
+		E29E70F52B6E6285000291D1 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				E29E70F62B6E62A9000291D1 /* String+Ext.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -265,6 +276,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E29E70F72B6E62A9000291D1 /* String+Ext.swift in Sources */,
 				E29E70B02B6D8A5E000291D1 /* SingInViewModel.swift in Sources */,
 				E29E70B22B6D9123000291D1 /* SingInEmailTextField.swift in Sources */,
 				E29E70AD2B6D7AEA000291D1 /* SignInView.swift in Sources */,
