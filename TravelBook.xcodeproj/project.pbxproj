@@ -11,6 +11,10 @@
 		E29E70A02B6D7068000291D1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E29E709F2B6D7068000291D1 /* ContentView.swift */; };
 		E29E70A22B6D7069000291D1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E29E70A12B6D7069000291D1 /* Assets.xcassets */; };
 		E29E70A52B6D7069000291D1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E29E70A42B6D7069000291D1 /* Preview Assets.xcassets */; };
+		E29E70AD2B6D7AEA000291D1 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E29E70AC2B6D7AEA000291D1 /* SignInView.swift */; };
+		E29E70B02B6D8A5E000291D1 /* SingInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E29E70AF2B6D8A5E000291D1 /* SingInViewModel.swift */; };
+		E29E70B22B6D9123000291D1 /* SingInEmailTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E29E70B12B6D9123000291D1 /* SingInEmailTextField.swift */; };
+		E29E70B72B6D9614000291D1 /* SingInPasswordTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E29E70B62B6D9614000291D1 /* SingInPasswordTextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +23,10 @@
 		E29E709F2B6D7068000291D1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		E29E70A12B6D7069000291D1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E29E70A42B6D7069000291D1 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		E29E70AC2B6D7AEA000291D1 /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
+		E29E70AF2B6D8A5E000291D1 /* SingInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingInViewModel.swift; sourceTree = "<group>"; };
+		E29E70B12B6D9123000291D1 /* SingInEmailTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingInEmailTextField.swift; sourceTree = "<group>"; };
+		E29E70B62B6D9614000291D1 /* SingInPasswordTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingInPasswordTextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +59,8 @@
 		E29E709C2B6D7068000291D1 /* TravelBook */ = {
 			isa = PBXGroup;
 			children = (
+				E29E70AE2B6D8A20000291D1 /* ViewModel */,
+				E29E70AB2B6D7A7E000291D1 /* View */,
 				E29E709D2B6D7068000291D1 /* TravelBookApp.swift */,
 				E29E709F2B6D7068000291D1 /* ContentView.swift */,
 				E29E70A12B6D7069000291D1 /* Assets.xcassets */,
@@ -65,6 +75,32 @@
 				E29E70A42B6D7069000291D1 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		E29E70AB2B6D7A7E000291D1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E29E70B32B6D9385000291D1 /* TextField */,
+				E29E70AC2B6D7AEA000291D1 /* SignInView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E29E70AE2B6D8A20000291D1 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				E29E70AF2B6D8A5E000291D1 /* SingInViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		E29E70B32B6D9385000291D1 /* TextField */ = {
+			isa = PBXGroup;
+			children = (
+				E29E70B12B6D9123000291D1 /* SingInEmailTextField.swift */,
+				E29E70B62B6D9614000291D1 /* SingInPasswordTextField.swift */,
+			);
+			path = TextField;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,7 +173,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E29E70B02B6D8A5E000291D1 /* SingInViewModel.swift in Sources */,
+				E29E70B22B6D9123000291D1 /* SingInEmailTextField.swift in Sources */,
+				E29E70AD2B6D7AEA000291D1 /* SignInView.swift in Sources */,
 				E29E70A02B6D7068000291D1 /* ContentView.swift in Sources */,
+				E29E70B72B6D9614000291D1 /* SingInPasswordTextField.swift in Sources */,
 				E29E709E2B6D7068000291D1 /* TravelBookApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
