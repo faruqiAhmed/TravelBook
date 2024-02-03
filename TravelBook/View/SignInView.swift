@@ -47,7 +47,7 @@ struct SignInView: View {
                 Text("Don't Have an account yet?")
                     .foregroundStyle(Color("AppColor"))
                 Button {
-                    
+                    viewModel.showRegistration = true
                 } label: {
                     Text("Register")
                         .bold()
@@ -63,9 +63,13 @@ struct SignInView: View {
             }
             .padding()
             .padding(.bottom)
+            
         }
         .frame(maxHeight: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/,  alignment: .top)
         .ignoresSafeArea()
+        .sheet(isPresented: $viewModel.showRegistration) {
+            HomeView()
+        }
          
     }
         

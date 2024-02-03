@@ -47,7 +47,6 @@ struct SingInPasswordTextField: View {
                             .contentTransition(.symbolEffect)
                     }
                 }
-              //  .padding()
         }
               
     }

@@ -17,6 +17,7 @@ class SingInViewModel {
     var email = ""
     var password = ""
     var showPassWord = false
+    var showRegistration = false
     
     func validateform()  throws {
         if !email.isValidEmail(){
@@ -24,10 +25,7 @@ class SingInViewModel {
         } else if password.count < 8 {
             throw AppAuthError.inValidPasswordLength
         }
-        
-        
     }
-    
     func signInWithEmail() {
         Task {
             do {
