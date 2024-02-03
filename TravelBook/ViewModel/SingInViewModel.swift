@@ -18,7 +18,7 @@ class SingInViewModel {
     func signInWithEmail() {
         Task {
             do {
-                try await AuthService.shared.registerWithEmail(email: email, password: password)
+                try await AuthService.shared.signInWithEmail(email: email, password: password)
                 
             } catch {
                 print(error.localizedDescription)

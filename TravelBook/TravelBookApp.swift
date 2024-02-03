@@ -17,7 +17,13 @@ struct TravelBookApp: App {
     
     var body: some Scene {
         WindowGroup {
-            SignInView()
-        }
+            if (AuthService.shared.currentUser != nil)  {
+                HomeView()
+            } else {
+               SignInView()
+            }
+            }
+                
+           
     }
 }
