@@ -14,8 +14,6 @@ struct TravelBookApp: App {
     init(){
         FirebaseApp.configure()
     }
-    
-    
     var body: some Scene {
         WindowGroup {
             if (AuthService.shared.currentUser != nil)  {

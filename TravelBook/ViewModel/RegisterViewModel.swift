@@ -6,17 +6,15 @@
 //
 
 import Foundation
-
 @Observable
-
 class RegisterViewModel {
       var email = ""
       var password = ""
-     var passwordCheck = ""
-     var showPassWord = false
-    var  showpasswordCheck = false
-    var showError = false
-    var localizedError: String = "There was an issue creating your account. Please try again."
+      var passwordCheck = ""
+      var showPassWord = false
+      var  showpasswordCheck = false
+      var showError = false
+      var localizedError: String = "There was an issue creating your account. Please try again."
     func validateform()  throws {
         if !email.isValidEmail(){
             throw AppAuthError.invalidEmail
@@ -26,7 +24,6 @@ class RegisterViewModel {
             throw AppAuthError.passWordDoNotMatch
         }
     }
-    
     func registerWithEmail() {
         Task {
             do {
@@ -44,3 +41,5 @@ class RegisterViewModel {
         }
     }
 }
+
+

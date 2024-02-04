@@ -8,11 +8,8 @@
 import SwiftUI
 
 struct SignInView: View {
-    
     @State var viewModel = SingInViewModel()
-    
     var body: some View {
-        
         VStack {
             Image("travel-Imge")
                 .resizable()
@@ -56,7 +53,7 @@ struct SignInView: View {
                         .frame(maxWidth: .infinity)
                         .background (
                             RoundedRectangle(cornerRadius: 20)
-                                .stroke(Color("AppColor"))
+                            .stroke(Color("AppColor"))
                         )
                 }
                 

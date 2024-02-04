@@ -8,7 +8,6 @@
 
 import Observation
 import FirebaseAuth
-
  @Observable
 class SingInViewModel {
     var email = ""

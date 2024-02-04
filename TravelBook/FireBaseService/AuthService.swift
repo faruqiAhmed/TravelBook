@@ -62,8 +62,6 @@ final class AuthService {
                 throw  AppAuthError.networkError
             }
         }
-        
-       
     }
 
 func signInWithEmail(email: String, password: String) async throws {

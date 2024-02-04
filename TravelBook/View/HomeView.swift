@@ -7,14 +7,8 @@
 
 import SwiftUI
 import GoogleMaps
-
-
-
 struct GoogleMapview: UIViewRepresentable {
   // @ObservedObject  var viewModel: MapViewModel
-    
-    
-    
     private let zoom: Float = 25.0
     func makeUIView(context: Context) -> GMSMapView {
         let camera = GMSCameraPosition.camera(withLatitude: 23.8280, longitude: 90.3640, zoom: zoom)
@@ -39,12 +33,7 @@ struct GoogleMapview: UIViewRepresentable {
 //        uiView.animate(to: camera)
     }
 }
-
-
-
-
 struct HomeView: View {
-    
     @State var viewModel = ImagePickerViewModel()
     var body: some View {
        
@@ -55,9 +44,17 @@ struct HomeView: View {
             .ignoresSafeArea()
            
             VStack {
+                HStack {
+                    ForEach (viewModel.retrieveImegaes,id: \.self) { image in
+                        Image(uiImage: image)
+                            .resizable()
+                            .frame(width: 100,height: 100)
+                    }
+                }
                 Image(uiImage: viewModel.image ?? UIImage(named: "travel-icon")!)
                     .resizable()
                     .frame(width: 100, height: 100)
+                    
                 
                 Button("Choose Picture") {
                     viewModel.showSheet = true
@@ -77,11 +74,19 @@ struct HomeView: View {
                 }
                 
             }
-            
             .sheet(isPresented: $viewModel.showImagePicker) {
                 ImagePicker(image: $viewModel.image, isShown: $viewModel.showImagePicker, sourceType: viewModel.sourceType)
         }
-            
+            .onAppear {
+                viewModel.retrievedImegaes()
+            }
+        Button("Upload Image") {
+            viewModel.uploadImage()
+            viewModel.showAlert = true
+                    }
+        .alert(isPresented: $viewModel.showAlert) {
+                   Alert(title: Text("Success"), message: Text("Image uploaded successfully!"), dismissButton: .default(Text("OK")))
+               }
             VStack {
                 Button(role: .destructive) {
                     do {
@@ -104,7 +109,7 @@ struct HomeView: View {
             .padding()
             .padding(.bottom)
     }
-    }
+}
 
 #Preview {
     HomeView()
