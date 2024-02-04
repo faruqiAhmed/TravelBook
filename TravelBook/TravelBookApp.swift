@@ -10,6 +10,7 @@ import FirebaseCore
 
 @main
 struct TravelBookApp: App {
+    @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
     init(){
         FirebaseApp.configure()
     }
@@ -24,6 +25,5 @@ struct TravelBookApp: App {
             }
             }
                 
-           
     }
 }

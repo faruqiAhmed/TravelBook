@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E25AC34E2B6F90EC00032F9C /* ImagePickerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25AC34D2B6F90EC00032F9C /* ImagePickerViewModel.swift */; };
+		E25AC3942B6FABCE00032F9C /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25AC3932B6FABCE00032F9C /* ImagePicker.swift */; };
 		E29E709E2B6D7068000291D1 /* TravelBookApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E29E709D2B6D7068000291D1 /* TravelBookApp.swift */; };
 		E29E70A02B6D7068000291D1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E29E709F2B6D7068000291D1 /* ContentView.swift */; };
 		E29E70A22B6D7069000291D1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E29E70A12B6D7069000291D1 /* Assets.xcassets */; };
@@ -42,9 +44,17 @@
 		E29E70EB2B6E2B04000291D1 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E29E70EA2B6E2B04000291D1 /* AuthService.swift */; };
 		E29E70F22B6E5E65000291D1 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E29E70F12B6E5E65000291D1 /* HomeView.swift */; };
 		E29E70F72B6E62A9000291D1 /* String+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = E29E70F62B6E62A9000291D1 /* String+Ext.swift */; };
+		E29E718C2B6ED65A000291D1 /* GoogleMaps in Frameworks */ = {isa = PBXBuildFile; productRef = E29E718B2B6ED65A000291D1 /* GoogleMaps */; };
+		E29E718E2B6ED65A000291D1 /* GoogleMapsBase in Frameworks */ = {isa = PBXBuildFile; productRef = E29E718D2B6ED65A000291D1 /* GoogleMapsBase */; };
+		E29E71902B6ED65A000291D1 /* GoogleMapsCore in Frameworks */ = {isa = PBXBuildFile; productRef = E29E718F2B6ED65A000291D1 /* GoogleMapsCore */; };
+		E29E71922B6ED65A000291D1 /* GoogleMapsM4B in Frameworks */ = {isa = PBXBuildFile; productRef = E29E71912B6ED65A000291D1 /* GoogleMapsM4B */; };
+		E29E71942B6ED68B000291D1 /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E29E71932B6ED68B000291D1 /* MapViewModel.swift */; };
+		E29E71982B6ED7D1000291D1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E29E71972B6ED7D1000291D1 /* AppDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E25AC34D2B6F90EC00032F9C /* ImagePickerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerViewModel.swift; sourceTree = "<group>"; };
+		E25AC3932B6FABCE00032F9C /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		E29E709A2B6D7068000291D1 /* TravelBook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TravelBook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E29E709D2B6D7068000291D1 /* TravelBookApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelBookApp.swift; sourceTree = "<group>"; };
 		E29E709F2B6D7068000291D1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -58,6 +68,9 @@
 		E29E70EA2B6E2B04000291D1 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		E29E70F12B6E5E65000291D1 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		E29E70F62B6E62A9000291D1 /* String+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Ext.swift"; sourceTree = "<group>"; };
+		E29E71932B6ED68B000291D1 /* MapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewModel.swift; sourceTree = "<group>"; };
+		E29E71972B6ED7D1000291D1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		E29E71992B6EE0C4000291D1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,13 +86,17 @@
 				E29E70CE2B6E2605000291D1 /* FirebaseFirestore in Frameworks */,
 				E29E70C42B6E2605000291D1 /* FirebaseAuth in Frameworks */,
 				E29E70D02B6E2605000291D1 /* FirebaseFirestoreCombine-Community in Frameworks */,
+				E29E718C2B6ED65A000291D1 /* GoogleMaps in Frameworks */,
 				E29E70C02B6E2605000291D1 /* FirebaseAppCheck in Frameworks */,
+				E29E718E2B6ED65A000291D1 /* GoogleMapsBase in Frameworks */,
+				E29E71902B6ED65A000291D1 /* GoogleMapsCore in Frameworks */,
 				E29E70D62B6E2605000291D1 /* FirebaseFunctionsCombine-Community in Frameworks */,
 				E29E70DC2B6E2605000291D1 /* FirebaseInstallations in Frameworks */,
 				E29E70CC2B6E2605000291D1 /* FirebaseDynamicLinks in Frameworks */,
 				E29E70BE2B6E2605000291D1 /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */,
 				E29E70DA2B6E2605000291D1 /* FirebaseInAppMessagingSwift-Beta in Frameworks */,
 				E29E70D42B6E2605000291D1 /* FirebaseFunctions in Frameworks */,
+				E29E71922B6ED65A000291D1 /* GoogleMapsM4B in Frameworks */,
 				E29E70C82B6E2605000291D1 /* FirebaseDatabase in Frameworks */,
 				E29E70E02B6E2605000291D1 /* FirebasePerformance in Frameworks */,
 				E29E70C22B6E2605000291D1 /* FirebaseAppDistribution-Beta in Frameworks */,
@@ -113,12 +130,14 @@
 		E29E709C2B6D7068000291D1 /* TravelBook */ = {
 			isa = PBXGroup;
 			children = (
+				E29E71992B6EE0C4000291D1 /* Info.plist */,
 				E29E70F52B6E6285000291D1 /* Utils */,
 				E29E70B82B6E2409000291D1 /* GoogleService-Info.plist */,
 				E29E70E92B6E2AB4000291D1 /* Service */,
 				E29E70AE2B6D8A20000291D1 /* ViewModel */,
 				E29E70AB2B6D7A7E000291D1 /* View */,
 				E29E709D2B6D7068000291D1 /* TravelBookApp.swift */,
+				E25AC3932B6FABCE00032F9C /* ImagePicker.swift */,
 				E29E709F2B6D7068000291D1 /* ContentView.swift */,
 				E29E70A12B6D7069000291D1 /* Assets.xcassets */,
 				E29E70A32B6D7069000291D1 /* Preview Content */,
@@ -148,6 +167,9 @@
 			isa = PBXGroup;
 			children = (
 				E29E70AF2B6D8A5E000291D1 /* SingInViewModel.swift */,
+				E29E71932B6ED68B000291D1 /* MapViewModel.swift */,
+				E29E71972B6ED7D1000291D1 /* AppDelegate.swift */,
+				E25AC34D2B6F90EC00032F9C /* ImagePickerViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -217,6 +239,10 @@
 				E29E70E32B6E2605000291D1 /* FirebaseRemoteConfigSwift */,
 				E29E70E52B6E2605000291D1 /* FirebaseStorage */,
 				E29E70E72B6E2605000291D1 /* FirebaseStorageCombine-Community */,
+				E29E718B2B6ED65A000291D1 /* GoogleMaps */,
+				E29E718D2B6ED65A000291D1 /* GoogleMapsBase */,
+				E29E718F2B6ED65A000291D1 /* GoogleMapsCore */,
+				E29E71912B6ED65A000291D1 /* GoogleMapsM4B */,
 			);
 			productName = TravelBook;
 			productReference = E29E709A2B6D7068000291D1 /* TravelBook.app */;
@@ -248,6 +274,7 @@
 			mainGroup = E29E70912B6D7068000291D1;
 			packageReferences = (
 				E29E70BA2B6E2605000291D1 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				E29E718A2B6ED65A000291D1 /* XCRemoteSwiftPackageReference "ios-maps-sdk" */,
 			);
 			productRefGroup = E29E709B2B6D7068000291D1 /* Products */;
 			projectDirPath = "";
@@ -276,7 +303,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E25AC3942B6FABCE00032F9C /* ImagePicker.swift in Sources */,
+				E29E71982B6ED7D1000291D1 /* AppDelegate.swift in Sources */,
 				E29E70F72B6E62A9000291D1 /* String+Ext.swift in Sources */,
+				E25AC34E2B6F90EC00032F9C /* ImagePickerViewModel.swift in Sources */,
+				E29E71942B6ED68B000291D1 /* MapViewModel.swift in Sources */,
 				E29E70B02B6D8A5E000291D1 /* SingInViewModel.swift in Sources */,
 				E29E70B22B6D9123000291D1 /* SingInEmailTextField.swift in Sources */,
 				E29E70AD2B6D7AEA000291D1 /* SignInView.swift in Sources */,
@@ -421,6 +452,10 @@
 				DEVELOPMENT_TEAM = 6P4M8YQN8F;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TravelBook/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = Description;
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = Description;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -450,6 +485,10 @@
 				DEVELOPMENT_TEAM = 6P4M8YQN8F;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TravelBook/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = Description;
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = Description;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -498,6 +537,14 @@
 			requirement = {
 				kind = upToNextMajorVersion;
 				minimumVersion = 10.20.0;
+			};
+		};
+		E29E718A2B6ED65A000291D1 /* XCRemoteSwiftPackageReference "ios-maps-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/googlemaps/ios-maps-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.3.1;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
@@ -617,6 +664,26 @@
 			isa = XCSwiftPackageProductDependency;
 			package = E29E70BA2B6E2605000291D1 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = "FirebaseStorageCombine-Community";
+		};
+		E29E718B2B6ED65A000291D1 /* GoogleMaps */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E29E718A2B6ED65A000291D1 /* XCRemoteSwiftPackageReference "ios-maps-sdk" */;
+			productName = GoogleMaps;
+		};
+		E29E718D2B6ED65A000291D1 /* GoogleMapsBase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E29E718A2B6ED65A000291D1 /* XCRemoteSwiftPackageReference "ios-maps-sdk" */;
+			productName = GoogleMapsBase;
+		};
+		E29E718F2B6ED65A000291D1 /* GoogleMapsCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E29E718A2B6ED65A000291D1 /* XCRemoteSwiftPackageReference "ios-maps-sdk" */;
+			productName = GoogleMapsCore;
+		};
+		E29E71912B6ED65A000291D1 /* GoogleMapsM4B */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E29E718A2B6ED65A000291D1 /* XCRemoteSwiftPackageReference "ios-maps-sdk" */;
+			productName = GoogleMapsM4B;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

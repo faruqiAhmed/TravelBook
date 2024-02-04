@@ -19,13 +19,12 @@ final class AuthService {
     func registerWithEmail(email: String, password: String) async throws {
         let result = try await auth.createUser(withEmail: email, password: password)
         currentUser = result.user
-        print(" UserD\(result.user)")
+       
     }
 
 func signInWithEmail(email: String, password: String) async throws {
   let result =    try await  auth.signIn(withEmail: email, password: password)
     currentUser =  result.user
-        print(result.user)
     }
     func signOut() throws {
         try auth.signOut()
