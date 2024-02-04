@@ -8,17 +8,16 @@
 
 import Observation
 import FirebaseAuth
-enum  AppAuthError: Error {
-    case invalidEmail
-    case inValidPasswordLength
-}
+
  @Observable
 class SingInViewModel {
     var email = ""
     var password = ""
     var showPassWord = false
     var showRegistration = false
-    
+    var invaidPassword = false
+    var showError = false
+    var localizedError: String = " There is a issue . Please Try Aging"
     func validateform()  throws {
         if !email.isValidEmail(){
             throw AppAuthError.invalidEmail
@@ -32,7 +31,12 @@ class SingInViewModel {
                  try validateform()
                 try await AuthService.shared.signInWithEmail(email: email, password: password)
                 
+            } catch let error as AppAuthError {
+                showError = true
+                localizedError = error.localizedDescription
+                print(error.localizedDescription)
             } catch {
+                showError = true
                 print(error.localizedDescription)
             }
         }

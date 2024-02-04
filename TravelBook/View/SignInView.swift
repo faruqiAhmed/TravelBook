@@ -12,16 +12,16 @@ struct SignInView: View {
     @State var viewModel = SingInViewModel()
     
     var body: some View {
-
+        
         VStack {
-           Image("travel-Imge")
+            Image("travel-Imge")
                 .resizable()
                 .scaledToFill()
                 .overlay {
                     LinearGradient(gradient: Gradient(colors: [Color("AppColor"), .clear]), startPoint: .bottom, endPoint: .top)
                 }
                 .frame(height: 400)
-                Spacer()
+            Spacer()
             VStack{
                 SingInEmailTextField(placeHolder: "Email Adress", text: $viewModel.email)
                 SingInPasswordTextField(placeHolder: "PassWord", showPassWord: $viewModel.showPassWord, text: $viewModel.password)
@@ -29,7 +29,7 @@ struct SignInView: View {
                 Button {
                     viewModel.signInWithEmail()
                 } label: {
-                   Text("Sing In")
+                    Text("Sing In")
                         .bold()
                         .foregroundStyle(.white)
                         .padding()
@@ -39,7 +39,7 @@ struct SignInView: View {
                                 .fill(Color("AppColor"))
                         }
                 }
-
+                
             }
             .padding()
             Spacer()
@@ -54,25 +54,34 @@ struct SignInView: View {
                         .foregroundStyle(Color("AppColor"))
                         .padding()
                         .frame(maxWidth: .infinity)
-                        .background {
+                        .background (
                             RoundedRectangle(cornerRadius: 20)
                                 .stroke(Color("AppColor"))
-                        }
+                        )
                 }
-
+                
             }
             .padding()
             .padding(.bottom)
             
         }
-        .frame(maxHeight: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/,  alignment: .top)
+        .frame(maxHeight: .infinity,  alignment: .top)
         .ignoresSafeArea()
         .sheet(isPresented: $viewModel.showRegistration) {
-            HomeView()
+            RegisterView()
+                .presentationDetents([.fraction(0.5)])
         }
-         
+        .alert("oops", isPresented: $viewModel.showError) {
+            Button {
+                viewModel.showError = false
+            } label: {
+                Text("ok")
+            }
+
+        } message: {
+            Text(viewModel.localizedError)
+        }
     }
-        
 }
 
 #Preview {

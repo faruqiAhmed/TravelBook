@@ -50,6 +50,10 @@
 		E29E71922B6ED65A000291D1 /* GoogleMapsM4B in Frameworks */ = {isa = PBXBuildFile; productRef = E29E71912B6ED65A000291D1 /* GoogleMapsM4B */; };
 		E29E71942B6ED68B000291D1 /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E29E71932B6ED68B000291D1 /* MapViewModel.swift */; };
 		E29E71982B6ED7D1000291D1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E29E71972B6ED7D1000291D1 /* AppDelegate.swift */; };
+		E2E2FDEC2B6FCAEB00AC2BCA /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2E2FDEB2B6FCAEB00AC2BCA /* RegisterView.swift */; };
+		E2E2FDEE2B6FCFFF00AC2BCA /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2E2FDED2B6FCFFF00AC2BCA /* RegisterViewModel.swift */; };
+		E2E2FDF02B6FD2CD00AC2BCA /* EmailTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2E2FDEF2B6FD2CD00AC2BCA /* EmailTextField.swift */; };
+		E2E2FDF22B6FD2F100AC2BCA /* PasswordTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2E2FDF12B6FD2F100AC2BCA /* PasswordTextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -71,6 +75,10 @@
 		E29E71932B6ED68B000291D1 /* MapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewModel.swift; sourceTree = "<group>"; };
 		E29E71972B6ED7D1000291D1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E29E71992B6EE0C4000291D1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		E2E2FDEB2B6FCAEB00AC2BCA /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
+		E2E2FDED2B6FCFFF00AC2BCA /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
+		E2E2FDEF2B6FD2CD00AC2BCA /* EmailTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailTextField.swift; sourceTree = "<group>"; };
+		E2E2FDF12B6FD2F100AC2BCA /* PasswordTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordTextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,7 +141,7 @@
 				E29E71992B6EE0C4000291D1 /* Info.plist */,
 				E29E70F52B6E6285000291D1 /* Utils */,
 				E29E70B82B6E2409000291D1 /* GoogleService-Info.plist */,
-				E29E70E92B6E2AB4000291D1 /* Service */,
+				E29E70E92B6E2AB4000291D1 /* FireBaseService */,
 				E29E70AE2B6D8A20000291D1 /* ViewModel */,
 				E29E70AB2B6D7A7E000291D1 /* View */,
 				E29E709D2B6D7068000291D1 /* TravelBookApp.swift */,
@@ -159,6 +167,7 @@
 				E29E70B32B6D9385000291D1 /* TextField */,
 				E29E70AC2B6D7AEA000291D1 /* SignInView.swift */,
 				E29E70F12B6E5E65000291D1 /* HomeView.swift */,
+				E2E2FDEB2B6FCAEB00AC2BCA /* RegisterView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -170,6 +179,7 @@
 				E29E71932B6ED68B000291D1 /* MapViewModel.swift */,
 				E29E71972B6ED7D1000291D1 /* AppDelegate.swift */,
 				E25AC34D2B6F90EC00032F9C /* ImagePickerViewModel.swift */,
+				E2E2FDED2B6FCFFF00AC2BCA /* RegisterViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -179,16 +189,18 @@
 			children = (
 				E29E70B12B6D9123000291D1 /* SingInEmailTextField.swift */,
 				E29E70B62B6D9614000291D1 /* SingInPasswordTextField.swift */,
+				E2E2FDEF2B6FD2CD00AC2BCA /* EmailTextField.swift */,
+				E2E2FDF12B6FD2F100AC2BCA /* PasswordTextField.swift */,
 			);
 			path = TextField;
 			sourceTree = "<group>";
 		};
-		E29E70E92B6E2AB4000291D1 /* Service */ = {
+		E29E70E92B6E2AB4000291D1 /* FireBaseService */ = {
 			isa = PBXGroup;
 			children = (
 				E29E70EA2B6E2B04000291D1 /* AuthService.swift */,
 			);
-			path = Service;
+			path = FireBaseService;
 			sourceTree = "<group>";
 		};
 		E29E70F52B6E6285000291D1 /* Utils */ = {
@@ -303,9 +315,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E2E2FDF02B6FD2CD00AC2BCA /* EmailTextField.swift in Sources */,
 				E25AC3942B6FABCE00032F9C /* ImagePicker.swift in Sources */,
+				E2E2FDEE2B6FCFFF00AC2BCA /* RegisterViewModel.swift in Sources */,
 				E29E71982B6ED7D1000291D1 /* AppDelegate.swift in Sources */,
 				E29E70F72B6E62A9000291D1 /* String+Ext.swift in Sources */,
+				E2E2FDEC2B6FCAEB00AC2BCA /* RegisterView.swift in Sources */,
+				E2E2FDF22B6FD2F100AC2BCA /* PasswordTextField.swift in Sources */,
 				E25AC34E2B6F90EC00032F9C /* ImagePickerViewModel.swift in Sources */,
 				E29E71942B6ED68B000291D1 /* MapViewModel.swift in Sources */,
 				E29E70B02B6D8A5E000291D1 /* SingInViewModel.swift in Sources */,
