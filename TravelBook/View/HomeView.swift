@@ -8,41 +8,47 @@
 import SwiftUI
 import GoogleMaps
 struct GoogleMapview: UIViewRepresentable {
-  // @ObservedObject  var viewModel: MapViewModel
-    private let zoom: Float = 25.0
+   @ObservedObject  var viewModel: MapViewModel
+    private let zoom: Float = 12.0
     func makeUIView(context: Context) -> GMSMapView {
-        let camera = GMSCameraPosition.camera(withLatitude: 23.8280, longitude: 90.3640, zoom: zoom)
-//        let camera = GMSCameraPosition.camera(withLatitude: viewModel.userLocation?.latitude ?? 0,
-//                                              longitude: viewModel.userLocation?.longitude ?? 0,
-//                                              zoom: 15)
-        let mapView = GMSMapView.map(withFrame: CGRect.zero, camera: camera)
+       let camera = GMSCameraPosition.camera(withLatitude: 23.8280, longitude: 90.3640, zoom: zoom)
+//       let camera = GMSCameraPosition.camera(withLatitude: viewModel.userLocation?.latitude ?? 0,
+//                                             longitude: viewModel.userLocation?.longitude ?? 0,
+//                                             zoom: 5)
+        let mapView = GMSMapView.map(withFrame: UIScreen.main.bounds, camera: camera)
         mapView.camera = camera
         let mapCenter = CLLocationCoordinate2DMake(mapView.camera.target.latitude, mapView.camera.target.longitude)
                let marker = GMSMarker(position: mapCenter)
                marker.title = "CodeSpeedy Technology"
                marker.snippet = "Web Development & Mobile App Development"
                marker.map = mapView
-        mapView.isMyLocationEnabled = false
+        mapView.isMyLocationEnabled = true
+        mapView.delegate = viewModel
         return mapView
     }
     
     func updateUIView(_ uiView: GMSMapView, context: Context) {
-//       let camera = GMSCameraPosition.camera(withLatitude: viewModel.userLocation?.latitude ?? 0,
-//                                             longitude: viewModel.userLocation?.longitude ?? 0,
-//                                              zoom: 15)
-//        uiView.animate(to: camera)
+        let camera = GMSCameraPosition.camera(withLatitude: 23.8280, longitude: 90.3640, zoom: zoom)
+
+     /*   let camera = GMSCameraPosition.camera(withLatitude: viewModel.userLocation?.latitude ?? 0,
+                                             longitude: viewModel.userLocation?.longitude ?? 0,
+                                              zoom: 15)*/
+       uiView.animate(to: camera)
     }
+    
 }
+
 struct HomeView: View {
     @State var viewModel = ImagePickerViewModel()
+    var viewModesl = MapViewModel()
     var body: some View {
-       
             VStack{
-                GoogleMapview()
-                
+                GoogleMapview(viewModel:viewModesl)
             }
             .ignoresSafeArea()
            
+        
+        /*
             VStack {
                 HStack {
                     ForEach (viewModel.retrieveImegaes,id: \.self) { image in
@@ -87,7 +93,9 @@ struct HomeView: View {
         .alert(isPresented: $viewModel.showAlert) {
                    Alert(title: Text("Success"), message: Text("Image uploaded successfully!"), dismissButton: .default(Text("OK")))
                }
-            VStack {
+         
+         */
+        VStack(){
                 Button(role: .destructive) {
                     do {
                         try AuthService.shared.signOut()
@@ -109,6 +117,7 @@ struct HomeView: View {
             .padding()
             .padding(.bottom)
     }
+
 }
 
 #Preview {

@@ -50,6 +50,7 @@
 		E29E71922B6ED65A000291D1 /* GoogleMapsM4B in Frameworks */ = {isa = PBXBuildFile; productRef = E29E71912B6ED65A000291D1 /* GoogleMapsM4B */; };
 		E29E71942B6ED68B000291D1 /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E29E71932B6ED68B000291D1 /* MapViewModel.swift */; };
 		E29E71982B6ED7D1000291D1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E29E71972B6ED7D1000291D1 /* AppDelegate.swift */; };
+		E2C774FB2B70D56500771DB7 /* LocationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2C774FA2B70D56400771DB7 /* LocationModel.swift */; };
 		E2E2FDEC2B6FCAEB00AC2BCA /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2E2FDEB2B6FCAEB00AC2BCA /* RegisterView.swift */; };
 		E2E2FDEE2B6FCFFF00AC2BCA /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2E2FDED2B6FCFFF00AC2BCA /* RegisterViewModel.swift */; };
 		E2E2FDF02B6FD2CD00AC2BCA /* EmailTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2E2FDEF2B6FD2CD00AC2BCA /* EmailTextField.swift */; };
@@ -75,6 +76,7 @@
 		E29E71932B6ED68B000291D1 /* MapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewModel.swift; sourceTree = "<group>"; };
 		E29E71972B6ED7D1000291D1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E29E71992B6EE0C4000291D1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		E2C774FA2B70D56400771DB7 /* LocationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationModel.swift; sourceTree = "<group>"; };
 		E2E2FDEB2B6FCAEB00AC2BCA /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
 		E2E2FDED2B6FCFFF00AC2BCA /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
 		E2E2FDEF2B6FD2CD00AC2BCA /* EmailTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailTextField.swift; sourceTree = "<group>"; };
@@ -138,6 +140,7 @@
 		E29E709C2B6D7068000291D1 /* TravelBook */ = {
 			isa = PBXGroup;
 			children = (
+				E2C774F92B70D53800771DB7 /* Model */,
 				E29E71992B6EE0C4000291D1 /* Info.plist */,
 				E29E70F52B6E6285000291D1 /* Utils */,
 				E29E70B82B6E2409000291D1 /* GoogleService-Info.plist */,
@@ -209,6 +212,14 @@
 				E29E70F62B6E62A9000291D1 /* String+Ext.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		E2C774F92B70D53800771DB7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E2C774FA2B70D56400771DB7 /* LocationModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -319,6 +330,7 @@
 				E25AC3942B6FABCE00032F9C /* ImagePicker.swift in Sources */,
 				E2E2FDEE2B6FCFFF00AC2BCA /* RegisterViewModel.swift in Sources */,
 				E29E71982B6ED7D1000291D1 /* AppDelegate.swift in Sources */,
+				E2C774FB2B70D56500771DB7 /* LocationModel.swift in Sources */,
 				E29E70F72B6E62A9000291D1 /* String+Ext.swift in Sources */,
 				E2E2FDEC2B6FCAEB00AC2BCA /* RegisterView.swift in Sources */,
 				E2E2FDF22B6FD2F100AC2BCA /* PasswordTextField.swift in Sources */,
@@ -477,6 +489,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -510,6 +523,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
