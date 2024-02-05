@@ -19,8 +19,8 @@ struct GoogleMapview: UIViewRepresentable {
         mapView.camera = camera
         let mapCenter = CLLocationCoordinate2DMake(mapView.camera.target.latitude, mapView.camera.target.longitude)
                let marker = GMSMarker(position: mapCenter)
-               marker.title = "CodeSpeedy Technology"
-               marker.snippet = "Web Development & Mobile App Development"
+               marker.title = " iOS  team"
+               marker.snippet = "Mobile App Development"
                marker.map = mapView
         mapView.isMyLocationEnabled = true
         mapView.delegate = viewModel
